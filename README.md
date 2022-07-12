@@ -24,4 +24,8 @@ La pagina web muestra los productos gracias a un scraping que guarda datos en la
 este script de scraping busca de acuerdo a los links de las tiendas, por cada tienda va a buscar un tipo de producto y sacará lo importante de cada producto, despues se registrarán
 los detalles e informacion del producto en la base de datos. Este scraping para un mejor desempeño funciona gracias a hilos.
 
+![screencapture-localhost-perfil-php-2022-07-12-14_24_39](https://user-images.githubusercontent.com/76752359/178567129-7c277432-8ba0-474d-8f2c-b0b1637692ef.png)
 
+![screencapture-localhost-producto-php-2022-07-12-14_18_03](https://user-images.githubusercontent.com/76752359/178566086-fe58756f-147a-4400-867e-943b7233c13f.png)
+
+![screencapture-localhost-comunidad-php-2022-07-12-14_25_39](https://user-images.githubusercontent.com/76752359/178567307-0ba606c8-5373-425f-91b2-edc4304059e7.png)
