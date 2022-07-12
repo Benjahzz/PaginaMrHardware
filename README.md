@@ -1,6 +1,7 @@
 # MrHardware 
 
 MrHardware es una paginaWeb que ayuda a cotizar un setup y comparar precios de miles de productos de diferentes paginas web.
+![screencapture-localhost-index-php-2022-07-12-14_14_52](https://user-images.githubusercontent.com/76752359/178565405-69108034-3bf9-49e8-8f5d-9d039afa6487.png)
 
 # Comunidad
 Esta página cuenta con un apartado comunidad en la cual diferentes personas pueden seguir a otros, copiar setups y buscar a otros. Cada perfil muestra su informacion personal,
@@ -22,6 +23,5 @@ up-votes y un boton para reportar ese comentario(discriminación,spam...).
 La pagina web muestra los productos gracias a un scraping que guarda datos en la base de datos, el scraping fue creado con python con ayuda de beautifulSoup y entre otras librerias,
 este script de scraping busca de acuerdo a los links de las tiendas, por cada tienda va a buscar un tipo de producto y sacará lo importante de cada producto, despues se registrarán
 los detalles e informacion del producto en la base de datos. Este scraping para un mejor desempeño funciona gracias a hilos.
-
 
 
