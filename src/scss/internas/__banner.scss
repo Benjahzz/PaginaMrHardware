@@ -1,0 +1,48 @@
+.banner-logo {
+  /* Rectangle 29 */
+
+  margin-bottom: 2rem;
+  height: 17rem;
+  background: linear-gradient(
+    270.07deg,
+    rgba(168, 218, 220, 0.5) 27.1%,
+    rgba(128, 179, 194, 0.422372) 40%,
+    rgba(69, 123, 157, 0.31) 58.67%,
+    rgba(69, 123, 157, 0.31) 78.44%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    min-width: 8rem;
+    width: 20%;
+    max-width: 20rem;
+  }
+  .text-banner {
+    font-size: 1.6rem;
+    width: 10rem;
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+  }
+  @include tabletRetrato {
+    .text-banner {
+      font-size: 2.4rem;
+      width: 30rem;
+    }
+  }
+
+  @include tabletGrande {
+    height: 25rem;
+
+    img {
+      margin-right: 2rem;
+    }
+
+    .text-banner {
+      font-size: 3.2rem;
+      width: 40rem;
+    }
+  }
+}

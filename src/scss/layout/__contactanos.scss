@@ -1,0 +1,183 @@
+.banner-contact {
+  margin-bottom: 2rem;
+  height: 17rem;
+  background: linear-gradient(
+    270.07deg,
+    rgba(168, 218, 220, 0.5) 27.1%,
+    rgba(128, 179, 194, 0.422372) 40%,
+    rgba(69, 123, 157, 0.31) 58.67%,
+    rgba(69, 123, 157, 0.31) 78.44%
+  );
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  .text-contact {
+    font-family: $fuentePrincipal;
+    font-size: 2.6rem;
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+  }
+}
+
+.containerContactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $fuentePrincipal;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+
+  
+
+  .inputProfile-contact {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    @include tabletGrande {
+      display: initial;
+      width: initial;
+      gap: initial;
+    }
+  }
+
+  .txt-contact {
+    font-family: $fuentePrincipal;
+    border: 0.2rem solid $colorNaranjoLight;
+    height: 2.8rem;
+    width: 50%;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    @include tabletGrande {
+      font-family: $fuentePrincipal;
+      border: 0.2rem solid $colorNaranjoLight;
+      height: 2.8rem;
+      width: 21.79rem;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+    &::placeholder {
+      color: $colorNaranjoLight;
+    }
+  }
+
+  .containerContactEmail {
+    width: 100%;
+    display: flex;
+    @include tabletGrande {
+      width: initial;
+    }
+  }
+
+  .txtAsunto-contact {
+    font-family: $fuentePrincipal;
+    border: 0.2rem solid $colorNaranjoLight;
+    height: 2.8rem;
+    padding: 1.5rem 1rem;
+    margin-top: 2.2rem;
+    width: 100%;
+    @include tabletGrande {
+      font-family: $fuentePrincipal;
+      border: 0.2rem solid $colorNaranjoLight;
+      height: 2.8rem;
+      padding: 1.5rem 1rem;
+      margin-top: 2.2rem;
+      width: 44rem;
+    }
+    &::placeholder {
+      color: $colorNaranjoLight;
+    }
+  }
+
+  .txtComentario-contact {
+    font-family: $fuentePrincipal;
+    border: 0.2rem solid $colorNaranjoLight;
+    height: 2.8rem;
+    padding: 1.5rem 1rem;
+    margin-top: 2.2rem;
+    width: 100%;
+    height: 13rem;
+    resize: none;
+    @include tabletGrande {
+      font-family: $fuentePrincipal;
+      border: 0.2rem solid $colorNaranjoLight;
+      height: 2.8rem;
+      padding: 1.5rem 1rem;
+      margin-top: 2.2rem;
+      width: 44rem;
+      height: 13rem;
+      resize: none;
+    }
+    &::placeholder {
+      color: $colorNaranjoLight;
+    }
+  }
+
+  .btnEnviar-contact {
+    margin-top: 3rem;
+    background-color: $colorNaranjo;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 17rem;
+    height: 4rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.bottom-contact {
+  margin: auto;
+  width: 80%;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    270.07deg,
+    rgba(168, 218, 220, 0.5) 27.1%,
+    rgba(128, 179, 194, 0.422372) 40%,
+    rgba(69, 123, 157, 0.31) 58.67%,
+    rgba(69, 123, 157, 0.31) 78.44%
+  );
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include tabletGrande {
+    width: 55%;
+  }
+
+  .text-contact {
+    font-family: $fuentePrincipal;
+    font-size: 1.6rem;
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+  }
+  .titulont-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+    @include tabletGrande {
+      flex-direction: initial;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-bottom: 2rem;
+    }
+    img {
+      width: 10rem;
+    }
+  }
+
+  .mail-contact {
+    color: $colorNaranjo;
+  }
+}

@@ -1,0 +1,56 @@
+
+.wrapper-menu-list{
+    display: none;
+}
+.container-options{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+    text-decoration: none;
+    i{
+        font-size: 3.6rem;
+        color: white;
+    }
+    
+}
+@include tabletGrande {
+    .wrapper-menu-list {
+      background-color: $colorPrincipal;
+       border: .1rem solid $colorNaranjo;
+        position: absolute;
+        height: 1rem;
+        top: 78%;
+        width: 100%;
+        transition: height .3s ease-in;
+        display: flex;
+        border-radius: 0 0 1rem 1rem;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        
+    }
+  .wrapper-perfil:hover {
+    .wrapper-menu-list {
+      height: 13rem;
+
+      transition: height 0.3s ease-in;
+
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      z-index: 1;
+    }
+
+    .container-options {
+        margin-top: 2rem;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        cursor: pointer;
+        
+
+
+    }
+  }
+}

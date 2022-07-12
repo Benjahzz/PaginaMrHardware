@@ -1,0 +1,214 @@
+.modal-setup {
+  position: sticky;
+  height: 50%;
+  left: 2rem;
+  bottom: 2rem;
+  background-color: $colorPrincipal;
+  width: 60%;
+  border-radius: 2rem;
+  z-index: 1;
+  height: 40rem;
+ opacity: 0;
+ visibility: hidden;
+  transition: 1s all;
+  pointer-events: none;
+  display: none;
+  .modal-container-setup {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .header-modal {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin-top: 2rem;
+    .item-header {
+      font-size: 2rem;
+      cursor: pointer;
+      
+      .fa-trash-can {
+        color: $colorNaranjo;
+      }
+
+      select {
+        background-color: $colorPrincipal;
+        color: white;
+        border: 0.1rem solid $colorPrincipal;
+        outline: 0.1rem solid $colorPrincipal;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include tabletGrande{
+    height: 50%;
+
+  }
+  @include desktop{
+    width: 50%;
+  }
+}
+.body-modal {
+  height: 90%;
+  overflow-y: scroll;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+
+  @include tabletGrande{
+    overflow-y: visible;
+  }
+  
+}
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .item {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.1rem solid #a0a0a0;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+
+    span {
+      justify-self: flex-start;
+      display: block;
+      font-size: 1.2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem; 
+
+
+      }
+      
+    }
+    .componente,
+    .precio-componente__setup {
+      flex: 1;
+    
+    }
+    .precio-componente__setup {
+      color: $colorNaranjo;
+      text-align: center;
+    }
+    .nombre-componente {
+      flex: 2;
+      justify-self: center;
+      text-align: center;
+      color: $colorCelesteClaro;
+    }
+    @include tabletGrande {
+      flex-direction: row;
+      text-align: start;
+    }
+  }
+  .precio-total-container {
+    font-size: 1.6rem;
+
+    padding: 2rem 0;
+    text-align: center;
+
+    .total-setup {
+      color: $colorNaranjo;
+      margin-left: 0.5rem;
+    }
+    @include desktop{
+      text-align: end;
+      margin-right: 5rem;
+    }
+  }
+}
+.fa-plus{
+   
+    font-size: 1.6rem;
+
+    outline: 1px solid rgb(255, 255, 255);
+    padding: 0.5rem 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.aparecer-modal{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+}
+.p-fixed{
+  position: fixed;
+}
+
+.animacion-modal-setup{
+  animation: setupAnimacion .5s;
+  @include keyframeScale(translateX(0), translateX(-10vw), setupAnimacion);
+}
+.animacion-modal-setup-exit{
+  animation: setupAnimacion2 .8s;
+  @include keyframeScale(translateX(-10vw), translateX(0), setupAnimacion2);
+}
+/*
+
+
+.body-modal {
+    position: absolute;
+    width: 90%;
+    font-size: 1.2rem;
+    .grid-container {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 1rem;
+      .grid-item {
+        border: 0.1rem solid rgba(0, 0, 0, 0.8);
+        text-align: justify;
+        padding: 0.8rem;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+      }
+      .grid-item1 {
+        border: 0.1rem solid rgba(0, 0, 0, 0.8);
+        text-align: justify;
+        padding: 0.8rem;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: $colorCelesteClaro;
+      }
+      .grid-item2 {
+        border: 0.1rem solid rgba(0, 0, 0, 0.8);
+        text-align: justify;
+        padding: 0.8rem;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: $colorNaranjo;
+      }
+    }
+    .total {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      right: 0;
+
+      .precioTotal {
+        font-size: 1.6rem;
+        &:not(:first-child){
+          margin-left: 1rem;
+          color: $colorNaranjo;
+        }
+
+      }
+    }
+  }
+
+*/

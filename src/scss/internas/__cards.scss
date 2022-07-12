@@ -1,0 +1,98 @@
+
+.card{
+  display: flex;
+  border: .1rem solid $colorNaranjo;
+  
+  flex-direction: column;
+  margin: 1rem 1rem 1rem 1rem;
+text-decoration: none;
+
+  align-items: center;
+  color: black;
+  height: 30rem !important;
+  justify-content: space-between !important;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 0.8rem -0.2rem $colorNaranjo;
+  
+  .imgproducto img{
+      width: 19rem;
+      height: 100%;
+     padding: 2rem 0;
+     object-fit: contain;
+  }
+  .imgproducto{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 16rem;
+    border-bottom: 0.1rem solid $colorNaranjo;
+    
+  }
+  &.card-populares{
+    position: relative;
+
+    .container-vistasProducto{
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      background-color: $colorNaranjo;
+      width: 10rem;
+      border-radius: 0 .5rem .5rem 0;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 1.5rem;
+      color: white;
+      flex-wrap: wrap;
+      box-shadow: 0px 2px 0px 0px darken($color: #e57979, $amount: 4),1.8px 2px 0px 0px darken($color: #e57979, $amount: 3);
+    }
+  }
+  
+}
+
+.nombreProducto {
+  width: 80%;
+  margin: 0px auto;
+  
+  border-color: white;
+  height: fit-content;
+  overflow: hidden;
+
+  font-size: 1.6rem;
+}
+.info {
+  padding: 5px;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  
+}
+.precio {
+  padding-right: 5px;
+  border-color: white;
+
+  border-right: 0.1rem solid $colorNaranjo;
+}
+
+.title-section{
+  margin-top: 5rem;
+  background: linear-gradient(to right, $colorPrincipal 0%, #457B9D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+
+  @include tabletRetrato{
+    font-size: 2.6rem;
+  }
+  @include tabletGrande{
+    font-size: 3rem;
+  }
+}
+
+
+
+
+
+
+

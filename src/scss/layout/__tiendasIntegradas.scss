@@ -1,0 +1,49 @@
+.banner-Tienda{    
+    margin-bottom: 2rem;
+  height: 17rem;
+  background: linear-gradient(
+    270.07deg,
+    rgba(168, 218, 220, 0.5) 27.1%,
+    rgba(128, 179, 194, 0.422372) 40%,
+    rgba(69, 123, 157, 0.31) 58.67%,
+    rgba(69, 123, 157, 0.31) 78.44%
+  );
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  .text{
+    font-family: $fuentePrincipal;
+    font-size: 2.6rem;
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+  }
+}
+
+.grid-container-tiendasIntegradas{
+  @include tabletGrande{
+    display: grid;
+ place-content: center;
+ place-items: center;
+  row-gap: 3rem;
+  grid-template-columns: 40rem 40rem;
+  padding: 2rem;
+  }
+}
+
+.grid-item {
+  img{
+    width: 45%;
+    margin: 0 auto;
+  }
+  
+  @include tabletGrande{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  }
+}

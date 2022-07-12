@@ -1,0 +1,207 @@
+.wrapper-menuH {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  .menu-aside {
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    position: relative;
+    .cuerpoH {
+      padding-top: 2rem;
+      width: fit-content;
+      .tituloH {
+        color: black;
+        font-size: 2rem;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .conjuntoH {
+        display: flex;
+        flex-direction: row;
+
+        &:hover {
+          cursor: pointer;
+          .irH {
+            color: $colorNaranjo;
+          }
+          .opcionH {
+            color: $colorNaranjo;
+          }
+        }
+        .irH {
+          color: black;
+          margin-left: 18.6rem;
+          font-size: 2rem;
+          padding-top: 1.86rem;
+          transition: 0.3s;
+        }
+        .disparejo {
+          margin-left: 19rem;
+        }
+      }
+      .opcionH {
+        padding: 0.8rem 0.8rem 0.8rem 3.2rem;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        background: none;
+        border: none;
+        
+        &:hover {
+          cursor: pointer;
+          color: $colorNaranjo;
+        }
+      }
+    }
+
+    .bienvenidaH {
+      background-color: $colorPrincipal;
+      height: 7rem;
+      font-size: 2.1rem;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      
+      hr {
+        border-color: $colorPrincipal;
+        border: none;
+        height: 0.1rem;
+        background-color: white;
+        width: 80%;
+      }
+    }
+    .footerH {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: $colorPrincipal;
+      height: 5rem;
+      font-size: 2.1rem;
+      text-align: center;
+      color: white;
+      padding: 1.5rem;
+      hr {
+        border-color: $colorPrincipal;
+        border: none;
+        height: 0.1rem;
+        background-color: white;
+      }
+    }
+  }
+  
+  .close-hamburguer {
+    position: relative;
+    background-color: $colorNaranjo;
+    color: white;
+    left: 1rem;
+    z-index: 1;
+    top: 2rem;
+    font-size: 2rem;
+    height: 3.4rem;
+    width: 3.4rem;
+    text-align: center;
+    padding-top: 0.6rem;
+    border-radius: 5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.mostrar-menuH {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  background-color: rgba(12, 12, 12, 0.507);
+  .menu-principal {
+    width: 32.6rem;
+  }
+}
+.quitar-menuH {
+  .menu-principal {
+    width: 0;
+  }
+  .menu-hardware {
+    width: 0;
+  }
+}
+
+.mostrar-menu-hard {
+  .menu-hardware {
+    width: 32.6rem;
+  }
+}
+.quitar-menu-hardware {
+  .menu-hardware {
+    width: 0;
+  }
+}
+.quitar-menu-perifericos {
+  .menu-perifericos {
+    width: 0;
+  }
+}
+
+.mostrar-menu-perifericos {
+  .menu-perifericos {
+    width: 32.6rem;
+  }
+}
+
+.menu-perifericos {
+  width: 0;
+}
+
+.menu-hardware {
+  width: 0;
+}
+.cuerpoH {
+  hr {
+    border: none;
+    height: 0.1rem;
+    background-color: black;
+  }
+  .volverH {
+    .volverH-icono {
+      transform: rotate(180deg);
+      color: black;
+      margin-left: 1rem;
+      font-size: 2rem;
+      padding-top: 1.35rem;
+      transition: 0.3s;
+    }
+  }
+  .conjuntoH {
+    &:hover {
+      cursor: pointer;
+      .subtitulo-opcion {
+        color: $colorNaranjo;
+      }
+      .volverH-icono {
+        color: $colorNaranjo;
+      }
+    }
+    .subtitulo-opcion {
+      font-size: 2.3rem;
+      transition: 0.3s;
+    }
+  }
+}

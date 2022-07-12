@@ -1,0 +1,128 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    
+    color: white;
+    font-family: $fuentePrincipal;
+    
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    width: 85%;
+    max-width: 160rem;
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+.span-orange{
+    color: $colorNaranjo; 
+}
+.d-n{
+    display: none !important;
+}
+.ripple{
+    position: absolute;
+    background-color: rgb(214, 33, 33);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: animateRippler 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+.hidden{
+    display: none;
+}
+.tienda-seleccionado{
+    background-color: $colorNaranjo !important; 
+    color: white !important;
+   
+}
+.community-p{
+    text-decoration: underline;
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+
+}
+.subrayado{
+    background-color: rgba(212, 212, 212, 0.596);
+}
+.comentario-votado{
+    color:  #1D3557 !important;
+}
+.darken-error{
+    color: darken($color: #e57979, $amount: 10) !important;
+}
+@keyframes animateRippler {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+    
+}
+
+// loader Paginas
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: white;
+    .wrapper-dots{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       
+        display: flex;
+        .dot{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: $colorNaranjo;
+            
+            &:not(:last-child){
+                margin-right: 1rem;
+            }
+            
+            
+            animation: dots 1.2s infinite ease-in-out;
+            &:nth-child(2){
+                animation-delay: .2s;                
+    
+            }
+            &:nth-child(3){
+                animation-delay: .4s;
+    
+            }
+    
+    
+            
+            
+        }
+    }
+
+    
+
+    
+    @keyframes dots {
+        50%{
+            opacity: 0;
+            transform: scale(0.7) translateY(10px);
+        }
+    }
+
+}

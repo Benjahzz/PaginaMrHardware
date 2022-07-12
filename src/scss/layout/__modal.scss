@@ -1,0 +1,343 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(73, 73, 73, 0.507);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  opacity: 0;
+  transition: 0.5s all ease-in;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 1;
+
+  .modal-container {
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    @include tabletRetrato {
+      width: 70%;
+    }
+    @include tabletGrande {
+      width: 55%;
+      height: 45rem;
+      flex-direction: row;
+      position: initial;
+    }
+    @include desktop {
+      width: 80rem;
+      height: 55%;
+    }
+  }
+}
+.bienvenida-form {
+  background-color: $colorCelesteClaro;
+
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  @include tabletRetrato {
+    height: 25rem;
+  }
+  @include tabletGrande {
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+    width: 50%;
+  }
+}
+
+.wrapper-bienvenida-items {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  flex-direction: column;
+  margin: 1rem auto;
+
+  .dialogo-container {
+    background-color: $colorPalido;
+    width: 100%;
+    height: 7rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.6rem;
+    text-align: center;
+
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -1.3rem;
+      left: 40%;
+      border-radius: 0 0 0 0;
+      border-style: solid;
+      border-width: 2rem 3rem 0 2rem;
+      border-color: $colorPalido transparent transparent transparent;
+    }
+    .dialogo-maquina {
+      width: 80%;
+      @include tabletRetrato {
+        width: 60%;
+      }
+      @include tabletGrande {
+        width: 80%;
+      }
+    }
+    @include tabletRetrato {
+      width: 70%;
+      height: 8rem;
+      align-self: center;
+      font-size: 1.8rem;
+    }
+    @include tabletGrande {
+      width: 90%;
+      height: 9rem;
+    }
+    @include desktop {
+      font-size: 2.2rem;
+    }
+  }
+
+  .robot-animation {
+    width: 10rem;
+    height: 10rem;
+    @include tabletRetrato {
+      width: 13rem;
+      height: 13rem;
+    }
+    @include tabletGrande {
+      margin-top: 1rem;
+    }
+    @include desktop {
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+}
+.container-form {
+  flex: 1.2 1 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: $fuentePrincipal;
+
+  .x {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    font-size: 2rem;
+    margin-bottom: -2.4rem;
+    background-color: $colorNaranjo;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+    .fa-xmark {
+      color: white;
+    }
+    @include tabletGrande {
+      top: -1.5rem;
+      right: -1.5rem;
+    }
+  }
+
+  
+  .txt {
+    background-color: white;
+    width: 60%;
+    text-align: left;
+
+    border: 0.1rem solid rgb(194, 194, 194);
+    height: 8%;
+    border-radius: 0.7rem;
+    outline: none;
+    color: black;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 1rem;
+    &:hover {
+      cursor: text;
+    }
+    @include tabletRetrato {
+      width: 50%;
+    }
+    @include tabletGrande {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include tabletRetrato {
+    padding: 0 0 1rem 0;
+  }
+  @include tabletGrande {
+    position: relative;
+  }
+}
+.border-right {
+  border-right: 0.1rem solid black;
+}
+
+.comun {
+  color: black;
+  text-align: center;
+}
+
+.sepa {
+  background-color: black;
+  width: 80%;
+  height: 0.2rem;
+  border: none;
+  background-color: grey;
+}
+
+.iniciarS {
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  @include tabletGrande {
+    font-size: 2.4rem;
+  }
+}
+.comun {
+  color: black;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  @include tabletRetrato {
+    font-size: 1.8rem;
+  }
+}
+
+.chk {
+  display: flex;
+  color: black;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-left: 2rem;
+
+  .chek {
+    margin-top: 1rem;
+    margin-right: 0.6rem;
+    transform: scale(1.2);
+    accent-color: $colorPrincipal;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @include tabletRetrato {
+    margin-left: 0;
+  }
+}
+.email-input-container{
+  position: relative;
+  width: 50%;
+  height: 8%;
+  display: flex;
+  flex-direction: column;
+  .txt{
+    width: 100%;
+    height: 100%;
+  }
+  .error-email{
+    position: absolute;
+    
+    color: $colorNaranjo;
+    bottom: -2.2rem;
+    
+
+  }
+}
+.body-modalform {
+  height: 100vh;
+  padding-right: 1.7rem;
+}
+.animacion-modal {
+  animation: scale1 1s;
+  @include keyframeScale(translateY(-120vh), translateY(0.2rem), scale1);
+}
+.moverContenedor {
+  animation: moverContenedor 0.4s linear;
+  @include keyframeScale(translateY(0), translateY(5rem), moverContenedor);
+}
+.colorModal {
+  animation: colorModal 1s;
+}
+
+.mostrarModal {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+@keyframes colorModal {
+  0% {
+    background-color: rgb(10, 10, 10);
+  }
+}
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+.btn-principales{
+  
+    background-color: $colorNaranjo;
+    width: 60%;
+    height: 12%;
+    border-radius: 0.8rem;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    &:hover {
+      cursor: pointer;
+    }
+    @include tabletRetrato {
+      height: 15%;
+    }
+    @include tabletGrande {
+      height: 12%;
+    }
+  
+}
+.error-animation{
+  animation: shake .8s;
+}
+@keyframes shake{
+  0%{
+    transform: translateX(0)
+  }
+  25%{
+    transform: translateX(15px);
+  }
+    
+  50%{
+    transform: translateX(-15px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}

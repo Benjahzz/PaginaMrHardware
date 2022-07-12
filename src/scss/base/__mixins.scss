@@ -1,0 +1,39 @@
+@mixin celular {
+    @media (max-width:599px) {
+        @content;
+    }
+}
+@mixin tabletRetrato {
+    @media (min-width:600px) {
+        @content;
+    }
+}
+@mixin tabletGrande {
+    @media (min-width:900px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width:1200px) {
+        @content;
+    }
+}
+@mixin desktopXL {
+    @media (min-width:1800px) {
+        @content;
+    }
+}
+
+@mixin keyframeScale($first, $second, $nombre){
+
+
+    @keyframes #{$nombre}{
+
+        0%{
+            transform: #{$first};
+        }
+        100%{
+            transform: #{$second};
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.banner{
+    
+    margin-bottom: 2rem;
+  height: 17rem;
+  background: linear-gradient(
+    270.07deg,
+    rgba(168, 218, 220, 0.5) 27.1%,
+    rgba(128, 179, 194, 0.422372) 40%,
+    rgba(69, 123, 157, 0.31) 58.67%,
+    rgba(69, 123, 157, 0.31) 78.44%
+  );
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  .text{
+    font-family: $fuentePrincipal;
+    font-size: 2.6rem;
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+  }
+}
+.terminos_condiciones{
+  
+    font-family: $fuentePrincipal;
+    color: black;
+    padding: 2rem 0;
+    .text{
+        margin-top: 2rem;
+        line-height:2.5;
+    }
+}
+
+.condiciones{
+  width: 90%;
+  margin: 0 auto;
+}

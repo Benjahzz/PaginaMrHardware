@@ -1,0 +1,39 @@
+.container-carousel {
+  position: relative;
+}
+
+.glider-prev {
+    top: 50% !important;
+  left: -4rem !important;
+  z-index: 0 !important;
+  display: none !important;
+  img {
+    width: 5rem;
+  }
+  @include tabletRetrato {
+    left: -4.2rem !important;
+    display: block !important;
+  }
+  @include desktop {
+    left: -6rem !important;
+  }
+}
+.glider-next {
+    top: 50% !important;
+  right: -4rem !important;
+  z-index: 0 !important;
+  display: none !important;
+  img {
+    width: 5rem;
+  }
+  
+  @include tabletRetrato {
+    display: block !important;
+    right: -4.2rem !important;
+    
+  }
+  @include desktop {
+
+    right: -6rem !important;
+  }
+}

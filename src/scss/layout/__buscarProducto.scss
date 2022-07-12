@@ -1,0 +1,159 @@
+.container-buscar-producto{
+    margin-top: 4rem;
+}
+
+.header-buscarProducto{
+
+    background-color: $colorPrincipal;
+
+    color: white;
+    border-radius: 3rem 3rem 0 0;
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+
+    .container-btns-filtrar{
+        display: flex;
+        width: 80%;
+        margin: 2rem auto 0 auto;
+        
+        i{
+            align-self: center;
+            color: $colorNaranjo;
+            font-size: 3rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        gap: 3rem;
+        .btn-filtrarTienda{
+            margin: 0 1rem;
+            text-decoration: none;
+            color: black;
+            flex: 1;
+            padding: 1rem 0;
+            font-family: $fuentePrincipal;
+            border-radius: 4rem;
+            border: .5rem solid $colorNaranjo;
+            background-color: white;
+            font-weight: bold;
+            &:hover {
+                cursor: pointer;
+              }
+        }
+        
+    }
+
+
+
+}
+
+
+.header-main__filtrar{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    flex-direction: column;
+    
+    p{
+        font-weight: bold;
+    }
+    .ordenar-container{
+
+        select{
+                padding: 1rem 1.5rem;
+                margin-left: 1rem;
+        }
+    }
+    @include tabletRetrato{
+        margin-top: 3rem;
+        flex-direction: row;
+    }
+}
+
+
+
+.container__productos-encontrados{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+    
+    .card{
+        margin: 0;
+        
+    }
+    @include tabletRetrato{
+        grid-template-columns: repeat(2,2fr);
+        
+    }
+    @include tabletGrande{
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include desktop{
+        grid-template-columns: repeat(4,1fr);
+    
+    }
+}
+
+
+.footer__main-productos-encontrados{
+    display: flex;
+    color: black;
+    
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    .container-numPaginas{
+
+        
+        display: flex;
+        p{
+            margin-left: 1rem;
+        }
+
+        .btn-numPagina{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: $colorPrincipal;
+            border: none;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            font-family: $fuentePrincipal;
+            width: 4.5rem;
+            height: 4.5rem;
+            text-decoration: none;
+            &:hover{
+                border: .3rem solid $colorNaranjo;
+            }
+            
+            &:not(:first-child){
+                margin-left: 1rem;
+            }
+            @include tabletGrande{
+                width: 5.5rem;
+                height: 5.5rem;
+            }
+            @include desktop{
+                
+            }
+        }
+        @include desktop{
+            margin-left: 28%;
+        }
+    }
+    @include desktop{
+        margin-top: 5rem;
+        flex-direction: row;
+    }
+}

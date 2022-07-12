@@ -1,0 +1,303 @@
+.header {
+  height: 24rem;
+  background-color: $colorPrincipal;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 1rem 0;
+  .titulo-principal {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: normal;
+    grid-column: 2/3;
+  }
+  @include tabletRetrato {
+    align-items: center;
+    .titulo-principal {
+      grid-column: 2/4;
+    }
+    h1 {
+      margin-right: 1rem;
+      grid-column: 2/4;
+      place-self: center;
+      font-size: 2.6rem;
+    }
+  }
+  @include tabletGrande {
+    height: 14rem;
+
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.header-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+
+  align-items: center;
+
+  @include tabletRetrato {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include tabletGrande {
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    align-items: center;
+  }
+}
+
+.container-hamburguer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  place-self: start;
+  padding: 0.5rem 0.8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: center;
+  cursor: pointer;
+  border: 0.1rem solid $colorNaranjo;
+  transition: 0.3s background ease-in-out;
+  i {
+    font-size: 2.5rem;
+    color: $colorNaranjo;
+  }
+  &:hover {
+    background-color: $colorNaranjo;
+
+    i {
+      color: white;
+    }
+  }
+  @include tabletRetrato {
+    place-self: start;
+    align-self: center;
+
+    i {
+      font-size: 3.2rem;
+    }
+  }
+  @include tabletGrande {
+    margin-right: 1rem;
+
+    i {
+      font-size: 3.8rem;
+    }
+  }
+}
+.button-comunidad {
+  background-color: transparent;
+  border: 0.1rem solid $colorNaranjo;
+  border-radius: 0.5rem;
+
+  grid-column: 1/4;
+  width: 40%;
+  min-width: 10rem;
+  place-self: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+  img {
+    width: 3.8rem;
+    margin: 0 auto;
+  }
+  span {
+    font-size: 1.6rem;
+  }
+  &:hover {
+    background-color: $colorNaranjoLight;
+
+    span {
+      color: white;
+    }
+  }
+  @include tabletRetrato {
+    grid-column: 2/4;
+    place-self: center;
+  }
+  @include tabletGrande {
+    width: 15rem;
+
+    margin: 0 1rem 0 1rem;
+  }
+}
+.wrapper-perfil {
+  background-color: $colorNaranjo;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: 4.5rem;
+  place-self: end;
+  &.profile-icon-community{
+    align-self: center;
+    height: 80%;
+    @include tabletGrande{
+      align-self: initial;
+      height: 100%;
+    }
+   }
+  .container-icon {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+  i {
+    font-size: 3rem;
+  }
+  
+
+  @include tabletRetrato {
+    width: 4rem;
+    padding: 0.5rem 2.5rem;
+    grid-column: 4/5;
+    place-self: end;
+    i {
+      font-size: 3.6rem;
+    }
+  }
+  @include tabletGrande {
+    place-self: center;
+    width: 8rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    i {
+      font-size: 4rem;
+    }
+  }
+}
+.container-search {
+  display: flex;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 3.5rem;
+  grid-column: 1/4;
+  flex-direction: column;
+  @include tabletRetrato {
+    grid-column: 1/5;
+  }
+  @include tabletGrande {
+    width: 50%;
+    height: 4.5rem;
+    align-items: center;
+  }
+
+  .search-box {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(255, 255, 255);
+    height: 14rem;
+    max-height: 14rem;
+
+    position: absolute;
+    width: 100%;
+    border-radius: 1rem;
+    left: 50%;
+    top: 13rem;
+    color: black;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    overflow-y: scroll;
+    z-index: 9;
+
+    .search-box-container {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      text-decoration: none;
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid black;
+      }
+
+      &:hover {
+        background-color: darken($color: white, $amount: 5);
+        color: white;
+      }
+    }
+    .search-box-container-icon {
+      margin-left: 1rem;
+      color: $colorNaranjo;
+    }
+    .search-box-container-content {
+      margin-left: 1rem;
+      color: $colorPrincipal;
+    }
+  }
+
+  .search-principal,
+  .search-comunidad {
+    width: 100%;
+    padding: 0 5rem 0 2rem;
+    border-radius: 10rem 10rem 10rem 10rem;
+    border: 0.2rem solid $colorNaranjo;
+    font-size: 1.4rem;
+    outline: none;
+    height: 100%;
+    font-family: $fuentePrincipal;
+    font-weight: 500;
+    @include tabletRetrato {
+      padding: 0 4.5rem 0 2rem;
+    }
+    @include tabletGrande {
+      padding: 0 4.5rem 0 2rem;
+    }
+  }
+  .search-button {
+    position: absolute;
+    right: -0.1rem;
+    bottom: 0;
+    top: -0.3rem;
+    width: 4.1rem;
+    padding: 2rem 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorNaranjo;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+
+    @include tabletRetrato {
+      width: 5.5rem;
+      height: 5.5rem;
+      top: -1rem;
+
+      i {
+        font-size: 2rem;
+      }
+    }
+    @include tabletGrande {
+      top: -1rem;
+      right: 0rem;
+      width: 6.8rem;
+
+      height: calc(100% + 2rem);
+      i {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
